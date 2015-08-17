@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TextFieldTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter zip code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-ko-tdO">
+                                <rect key="frame" x="16" y="46" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Kv-bq-oNC">
+                                <rect key="frame" x="16" y="157" width="502" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type money" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXX-SP-VHe">
+                                <rect key="frame" x="16" y="97" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7r-So-Bwd">
+                                <rect key="frame" x="535" y="157" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleInput:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Lpm-fD-CGc"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s7r-So-Bwd" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="272-Uw-Xsf"/>
+                            <constraint firstItem="IXX-SP-VHe" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="63W-EM-b43"/>
+                            <constraint firstItem="IXX-SP-VHe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Drl-Ik-5TG"/>
+                            <constraint firstItem="Y9f-ko-tdO" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="GP6-27-NjN"/>
+                            <constraint firstItem="Y9f-ko-tdO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="26" id="NxS-3E-ZqM"/>
+                            <constraint firstItem="Y9f-ko-tdO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Oaw-tW-ihe"/>
+                            <constraint firstItem="1Kv-bq-oNC" firstAttribute="top" secondItem="IXX-SP-VHe" secondAttribute="bottom" constant="30" id="a8v-rD-Xbk"/>
+                            <constraint firstItem="IXX-SP-VHe" firstAttribute="top" secondItem="Y9f-ko-tdO" secondAttribute="bottom" constant="21" id="i0L-xc-Okx"/>
+                            <constraint firstItem="1Kv-bq-oNC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="q0b-Fo-Web"/>
+                            <constraint firstItem="s7r-So-Bwd" firstAttribute="top" secondItem="IXX-SP-VHe" secondAttribute="bottom" constant="30" id="tag-bp-VhQ"/>
+                            <constraint firstItem="s7r-So-Bwd" firstAttribute="leading" secondItem="1Kv-bq-oNC" secondAttribute="trailing" constant="17" id="zts-kH-R1T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moneyField" destination="IXX-SP-VHe" id="Sop-ey-pi1"/>
+                        <outlet property="switchField" destination="s7r-So-Bwd" id="KSu-JH-xKi"/>
+                        <outlet property="toggleTextField" destination="1Kv-bq-oNC" id="Daa-UZ-ArQ"/>
+                        <outlet property="zipField" destination="Y9f-ko-tdO" id="0iP-Ts-Api"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="358"/>
+        </scene>
+    </scenes>
+</document>

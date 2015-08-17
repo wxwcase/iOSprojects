@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwoTabViewController" customModule="Two_Tabs" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="X4q-J5-AYG" id="jgD-gh-ZeU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKa-kF-Dcy">
+                    <rect key="frame" x="8" y="518" width="257" height="74"/>
+                    <state key="normal" title="First">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressedFirstButton:" destination="-1" eventType="touchUpInside" id="aTv-Ix-HLe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2d-Nk-0Dt">
+                    <rect key="frame" x="335" y="518" width="257" height="74"/>
+                    <state key="normal" title="Second">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didPressedSecondButton:" destination="-1" eventType="touchUpInside" id="Jdl-Fh-Mlf"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4q-J5-AYG">
+                    <rect key="frame" x="0.0" y="30" width="600" height="480"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="X4q-J5-AYG" secondAttribute="trailing" id="D7a-Kw-U8f"/>
+                <constraint firstItem="X4q-J5-AYG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="G1c-W2-Ki1"/>
+                <constraint firstAttribute="trailing" secondItem="A2d-Nk-0Dt" secondAttribute="trailing" constant="8" id="KOh-Vo-Qiq"/>
+                <constraint firstItem="dKa-kF-Dcy" firstAttribute="top" secondItem="X4q-J5-AYG" secondAttribute="bottom" constant="8" id="OeE-oM-EPY"/>
+                <constraint firstAttribute="bottom" secondItem="X4q-J5-AYG" secondAttribute="bottom" constant="90" id="SCt-vt-N5C"/>
+                <constraint firstItem="X4q-J5-AYG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UPf-qN-Qfx"/>
+                <constraint firstItem="A2d-Nk-0Dt" firstAttribute="top" secondItem="X4q-J5-AYG" secondAttribute="bottom" constant="8" id="XCa-0A-lb6"/>
+                <constraint firstItem="dKa-kF-Dcy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ZOv-ab-6bz"/>
+                <constraint firstItem="dKa-kF-Dcy" firstAttribute="width" secondItem="A2d-Nk-0Dt" secondAttribute="width" id="f6G-qX-sxm"/>
+                <constraint firstItem="A2d-Nk-0Dt" firstAttribute="leading" secondItem="dKa-kF-Dcy" secondAttribute="trailing" constant="70" id="gze-bQ-Jce"/>
+                <constraint firstAttribute="bottom" secondItem="dKa-kF-Dcy" secondAttribute="bottom" constant="8" id="lY0-YF-3cy"/>
+                <constraint firstItem="dKa-kF-Dcy" firstAttribute="height" secondItem="A2d-Nk-0Dt" secondAttribute="height" id="sGq-di-AJf"/>
+                <constraint firstItem="X4q-J5-AYG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="y1h-j5-Fbe"/>
+                <constraint firstAttribute="bottom" secondItem="A2d-Nk-0Dt" secondAttribute="bottom" constant="8" id="yX5-ht-HBQ"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="G1c-W2-Ki1"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="385" y="370"/>
+        </view>
+    </objects>
+</document>

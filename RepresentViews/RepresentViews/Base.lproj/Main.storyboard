@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="RepresentViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuK-yH-7cZ">
+                                <rect key="frame" x="163" y="142" width="37" height="32"/>
+                                <state key="normal" image="rock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rockSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fRa-DT-cGB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6C-Nf-X7A">
+                                <rect key="frame" x="386" y="142" width="37" height="32"/>
+                                <state key="normal" image="paper">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="paperSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yFa-Pd-1PB"/>
+                                    <segue destination="jYm-z7-JBm" kind="presentation" identifier="paperSegue" id="umq-Pb-ItU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzP-yM-a2U">
+                                <rect key="frame" x="260" y="411" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riU-Q1-slf">
+                                <rect key="frame" x="282" y="284" width="37" height="32"/>
+                                <state key="normal" image="scissors">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scissorsSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JfR-qG-Qfb"/>
+                                    <segue destination="jYm-z7-JBm" kind="presentation" identifier="scissorsSegue" id="Ah9-nf-N2T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EzP-yM-a2U" firstAttribute="top" secondItem="riU-Q1-slf" secondAttribute="bottom" constant="95" id="5Vm-w8-oho"/>
+                            <constraint firstItem="riU-Q1-slf" firstAttribute="top" secondItem="BuK-yH-7cZ" secondAttribute="bottom" constant="110" id="720-AJ-boU"/>
+                            <constraint firstItem="X6C-Nf-X7A" firstAttribute="leading" secondItem="riU-Q1-slf" secondAttribute="trailing" constant="67" id="adT-jg-IQi"/>
+                            <constraint firstAttribute="centerY" secondItem="riU-Q1-slf" secondAttribute="centerY" id="fFd-6Y-pf1"/>
+                            <constraint firstAttribute="centerX" secondItem="EzP-yM-a2U" secondAttribute="centerX" id="gnR-BK-XFg"/>
+                            <constraint firstItem="riU-Q1-slf" firstAttribute="leading" secondItem="BuK-yH-7cZ" secondAttribute="trailing" constant="82" id="s6N-2E-tVG"/>
+                            <constraint firstAttribute="centerX" secondItem="riU-Q1-slf" secondAttribute="centerX" constant="-0.5" id="udv-ae-dUx"/>
+                            <constraint firstItem="riU-Q1-slf" firstAttribute="top" secondItem="X6C-Nf-X7A" secondAttribute="bottom" constant="110" id="v8U-Px-KiJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="326" y="407"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="bMM-7P-plx">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="jYm-z7-JBm" customClass="ResultViewController" customModule="RepresentViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="prR-No-Odm"/>
+                        <viewControllerLayoutGuide type="bottom" id="VEO-Px-b1D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pSH-eC-SBb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TU-ja-WC6">
+                                <rect key="frame" x="279" y="360" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAw-un-heZ">
+                                <rect key="frame" x="264" y="447" width="73" height="30"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="jYm-z7-JBm" eventType="touchUpInside" id="sIG-iu-gCs"/>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" identifier="playAgain" id="TPh-w2-CdQ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mqU-Pj-NIA">
+                                <rect key="frame" x="180" y="184" width="231" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="mqU-Pj-NIA" secondAttribute="centerY" constant="52" id="4EX-i1-0up"/>
+                            <constraint firstItem="VEO-Px-b1D" firstAttribute="top" secondItem="2TU-ja-WC6" secondAttribute="bottom" constant="219" id="4Lk-9o-plI"/>
+                            <constraint firstAttribute="centerX" secondItem="2TU-ja-WC6" secondAttribute="centerX" id="Keu-qk-RGF"/>
+                            <constraint firstItem="2TU-ja-WC6" firstAttribute="top" secondItem="mqU-Pj-NIA" secondAttribute="bottom" constant="48" id="L4i-Pe-SsL"/>
+                            <constraint firstItem="zAw-un-heZ" firstAttribute="top" secondItem="2TU-ja-WC6" secondAttribute="bottom" constant="66" id="QlT-aE-eQj"/>
+                            <constraint firstAttribute="centerX" secondItem="mqU-Pj-NIA" secondAttribute="centerX" constant="4.5" id="fIZ-j3-6uJ"/>
+                            <constraint firstAttribute="centerX" secondItem="zAw-un-heZ" secondAttribute="centerX" constant="-0.5" id="v54-ac-TbP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="mqU-Pj-NIA" id="idH-AS-Xlq"/>
+                        <outlet property="label" destination="2TU-ja-WC6" id="uBG-U8-mjr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TdP-AE-K6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="407"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paper" width="37" height="32"/>
+        <image name="rock" width="37" height="32"/>
+        <image name="scissors" width="37" height="32"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ah9-nf-N2T"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationFish" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Cik-I1-Gxq">
+                                <rect key="frame" x="118" y="456" width="364" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axu-oH-JRp">
+                                <rect key="frame" x="266" y="520" width="69" height="30"/>
+                                <state key="normal" title="Animation">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUP-Bc-bGW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Axu-oH-JRp" secondAttribute="bottom" constant="50" id="Nuk-MH-toG"/>
+                            <constraint firstAttribute="centerX" secondItem="Cik-I1-Gxq" secondAttribute="centerX" id="UmM-4Z-QjT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cik-I1-Gxq" secondAttribute="trailing" constant="104" id="gRK-tp-Hsv"/>
+                            <constraint firstItem="Axu-oH-JRp" firstAttribute="top" secondItem="Cik-I1-Gxq" secondAttribute="bottom" constant="34" id="nye-gk-G6Q"/>
+                            <constraint firstItem="Cik-I1-Gxq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="104" id="olp-GQ-Te4"/>
+                            <constraint firstAttribute="centerX" secondItem="Axu-oH-JRp" secondAttribute="centerX" constant="-0.5" id="zoJ-Bj-QuE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberOfFishSlider" destination="Cik-I1-Gxq" id="nCv-lP-cUm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
